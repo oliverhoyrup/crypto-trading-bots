@@ -29,6 +29,7 @@ Forecasts day-ahead electricity price spreads across three Nordic/Continental Eu
 | **DK1–DK2** | ~2-3 | Weakest border; edge disappears under conservative/severe stress scenarios |
 
 </details>
+
 ### 2. Whale Activity Listener 🐳
 This is a bot that monitors activity on Hyperliquid, a decentralized perpetual futures exchange for cryptocurrency. It is inspired by the enormous short position placed on the exchange minutes before Trump's tariff-reveal that resulted in a +$160 million realized profit within 24 hours after the news due to the immediate stock and crypto market crash. The Whale Listener will notify you on Telegram when unusually large short positions are being placed.
 <details>
@@ -41,6 +42,7 @@ Captures order-flow toxicity, institutional positioning, and anomalous block tra
 * **Hybrid Dynamic Failover:** Engineered an automated fallback module. If the WebSocket layer encounters persistent network disruption and exceeds maximum reconnection parameters (`max_ws_attempts=5`), the pipeline automatically shifts to historical HTTP REST polling to prevent telemetry blind spots.
 * **Idempotency & Deduplication:** Tracks and validates unique cryptographic transaction identifiers (`trade_hash`) across an in-memory `set()` state and local append-only storage (`.csv`) to enforce structural data deduplication during multi-channel ingestion.
 </details>
+
 ### 3. Machine Learning for Crypto Volatility Forecasting 🦾
 This is a code i wrote while at Humboldt-Universität zu Berlin. I was interested in trying out different machine learning models to forecast the volatility of BTC and ETH and see which model performed the best. XGBoost slightly outperformed LSTM and Random Forest. Predicting volatility is interesting since it can be used for risk management, hedging strategies and open up for options arbitrage opportunities if our models can predict volatility better than the market (implied volatility). 
 <details>
@@ -72,6 +74,7 @@ To avoid look-ahead bias, all features were engineered strictly at time $t$ usin
 * **LSTM Tail Underperformance:** Despite its architectural complexity, the LSTM model underperformed on MAE. Training under standard Mean Squared Error (MSE) loss caused the network to make risk-averse predictions near the conditional mean, systematically undershooting volatility spikes.
 * **Feature Signality:** MDI feature importance charts confirmed that `vol_lag_1` dominates model decisions, matching classic GARCH(1,1) behavior. The Garman-Klass estimator provided incremental predictive signal at high frequencies.
 </details>
+
 ### 4. VIX Systematic Signals for S&P 500 🚨
 This bot sends you a Telegram message when certain VIX (market fear) index criteria have been met, that historically (backtested) outperforms DCA'ing. It is an oversimplified trading strategy on its own, but extending it and pairing it with other sttategies and models can provide useful signals within a broader execution framework.
 <details>
@@ -82,6 +85,7 @@ A programmatic systematic mean-reversion execution system designed to capture eq
 * **Persistent State Management:** Utilizes a custom JSON state serialization engine (`vix_strategy_state.json`) to manage trade lifecycle data across system restarts, ensuring the execution engine strictly honors temporal parameters (e.g., a hardcoded `75-day` cooldown matrix).
 * **Vectorized Matrix Slicing:** Employs vectorized rolling window analysis via `pandas` to isolate volatility distributions, calculating 21-day moving averages and rolling minima bounds concurrently to avoid unoptimized row-wise iterative loops.
 </details>
+
 ### 5. Funding Rate Arbitrage 🏦
 This bot tracks the funding rates of 134 different digital assets (tokens) on the GMX perpetual futures exchange and gives daily summaries of top-performing tokens (that has met certain volume criteria) in order to gather data and see which tokens are best suited for this strategy. The idea is then to open a short position of x token with x as colleteral creating a delta-neutral position that accumulates profit on the funding rate alone. Telegram notifications will update you on funding rates turning negative for longer periods of time (and back to positive) as well as the daily summary.
 <details>
