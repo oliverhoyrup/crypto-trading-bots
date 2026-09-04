@@ -1,5 +1,5 @@
 # Projects 🤖
-A collection of systematic trading tools, event-driven pipelines, and predictive models focused on digital assets and equity derivatives.
+
 ### 1. Electricity Price Spread Forecasting and Trading Strategies ⚡
 This is the code of a 10 ECTS Topics project I've done as part of my masters in Economics. I forecast the electricity price spreads across borders using a persistence and seasonal baseline, Elastic Net, LSTM, XGBoost and LightGBM point and LightGBM (point + quantile q10/q50/q90). I then evaluate their performance against each other and then run a trading strategy using these models to compare their profitability under realistic transaction costs etc. and stress-tests.
 
