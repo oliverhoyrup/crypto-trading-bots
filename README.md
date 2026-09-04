@@ -1,8 +1,5 @@
 # Projects 🤖
-
 A collection of systematic trading tools, event-driven pipelines, and predictive models focused on digital assets and equity derivatives.
-
-
 ### 1. Electricity Price Spread Forecasting and Trading Strategies ⚡
 This is the code of a 10 ECTS Topics project I've done as part of my masters in Economics. 
 <details>
@@ -32,7 +29,6 @@ Forecasts day-ahead electricity price spreads across three Nordic/Continental Eu
 | **DK1–DK2** | ~2-3 | Weakest border; edge disappears under conservative/severe stress scenarios |
 
 </details>
-
 ### 2. Whale Activity Listener 🐳
 This is a bot that monitors activity on Hyperliquid, a decentralized perpetual futures exchange for cryptocurrency. It is inspired by the enormous short position placed on the exchange minutes before Trump's tariff-reveal that resulted in a +$160 million realized profit within 24 hours after the news due to the immediate stock and crypto market crash. The Whale Listener will notify you on Telegram when unusually large short positions are being placed.
 <details>
