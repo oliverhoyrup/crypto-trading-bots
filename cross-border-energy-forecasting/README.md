@@ -2,7 +2,7 @@
 
 Forecasting and backtesting day-ahead electricity price spreads across three Nordic-Continental interconnectors, built as the empirical core of a Master's thesis in Economics (Aarhus University, 2026).
 
-This project forecasts the cross-border spread $S_t = P_{A,t} - P_{B,t}$ between coupled European bidding zones, converts those forecasts into trading signals, and backtests them under progressively more realistic execution-cost and capacity assumptions — then stress-tests whether the resulting "edge" survives that scrutiny, rather than presenting a single flattering backtest number.
+This project forecasts the cross-border spread $S_t = P_{A,t} - P_{B,t}$ between coupled European bidding zones, converts those forecasts into trading signals, and backtests them under progressively more realistic execution-cost and capacity assumptions — then stress-tests whether the resulting "edge" survives that scrutiny.
 
 ## Why this project
 
